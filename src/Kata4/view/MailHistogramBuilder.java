@@ -6,7 +6,11 @@ import java.util.List;
 
 public class MailHistogramBuilder {
     
-    public static Histogram<String> build(List<Mail> list){
+    public static Histogram<String> controller(List<Mail> list){
+        return build(list);
+    }
+
+    private static Histogram<String> build(List<Mail> list){
         Histogram<String> histogram= new Histogram<>();
         
         for(Mail mail : list) {histogram.increment(mail.getDomain());}

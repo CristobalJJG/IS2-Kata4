@@ -10,8 +10,12 @@ import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 public class MailListReader {
+
+    public static List<Mail> input(String filename){
+        return read(filename);
+    }
   
-    public static List<Mail> read(String filename){     
+    private static List<Mail> read(String filename){     
         
         List<Mail> list = new ArrayList<>();
         

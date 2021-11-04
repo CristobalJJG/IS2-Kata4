@@ -15,14 +15,18 @@ public class HistogramDisplay extends ApplicationFrame {
     
     private Histogram<String> histogram;
     
-    public HistogramDisplay(Histogram<String> histogram) {
+    public static void output(Histogram<String> histogram){
+        new HistogramDisplay(histogram).execute();
+    }
+
+    private HistogramDisplay(Histogram<String> histogram) {
         super("Histograma");
         this.histogram = histogram;
         setContentPane(createPanel());
         pack();    
     }
     
-    public void execute(){
+    private void execute(){
         setVisible(true);
     }
     
